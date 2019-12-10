@@ -3,3 +3,11 @@
 body{
     font-family: 'Work Sans', sans-serif;
 }
+.carousel-item {
+    height: 600px;
+}
+  
+.carousel-item img {
+     height: inherit;
+     width: inherit;
+}
