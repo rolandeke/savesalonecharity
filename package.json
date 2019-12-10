@@ -1,0 +1,11 @@
+{
+  "name": "sscf",
+  "version": "1.0.0",
+  "description": "Save Salone Charity Foundation Website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chinedum Roland EKe",
+  "license": "ISC"
+}
