@@ -13,3 +13,9 @@ body{
      height: inherit;
      width: inherit;
 }
+#contact i{
+    font-size: 60px;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+ }
