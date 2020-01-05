@@ -4,12 +4,17 @@
   "description": "Save Salone Charity Foundation Website",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app -w app",
     "start": "lite-server"
   },
   "author": "Chinedum Roland EKe",
   "license": "ISC",
   "devDependencies": {
-    "lite-server": "^2.5.4"
+    "lite-server": "^2.5.4",
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemailer": "^6.4.2"
   }
 }
