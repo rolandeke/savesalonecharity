@@ -14,10 +14,10 @@ app.get("/", (req, res) => {
 });
 
 //POST: COntact form from index.html
-app.post("/contact", async (req, res) => {
+app.post("/contact", (req, res) => {
   try {
     const { username, email, message } = req.body;
-    const info = await sendMail(username, email, message);
+    const info = sendMail(username, email, message);
     console.log(info);
   } catch (error) {
     throw error;
