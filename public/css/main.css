@@ -3,6 +3,7 @@
 a:hover{
     text-decoration: none;
 }
+
 body {
     font-family: 'Source Sans Pro', sans-serif;
     line-height: 1.5;
@@ -12,10 +13,17 @@ body {
     /* text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased; */
+    
 }
 
 .navbar-collapse ul>li>a{
-    color: #0d9e7ce1 !important;
+    color: #09886ae1 !important;
+    font-size: 30px;
+    margin: 0 15px;
+}
+.navbar-collapse ul>li>a:hover{
+    color: #0b745be1 !important;
+   
 }
 .carousel-item {
     height: 600px;
@@ -56,7 +64,7 @@ body {
 }
 
 section {
-    padding: 60px 0;
+    padding: 40px 0;
 }
 
 section .section-title {
@@ -108,7 +116,7 @@ section .section-title {
     -webkit-transform: rotateY(0deg);
     -ms-transform: rotateY(0deg);
     z-index: 2;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 
 .backside {
@@ -146,7 +154,7 @@ section .section-title {
 
 .frontside .card,
 .backside .card {
-    min-height: 312px;
+    min-height: 250px;
 }
 
 .backside .card a {
