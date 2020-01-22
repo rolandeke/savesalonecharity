@@ -2,6 +2,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const dotenv = require("dotenv");
+const path = require("path");
+
 const app = express();
 
 dotenv.config();
@@ -11,6 +13,7 @@ app.use(
     extended: false
   })
 );
+app.set("view engine", "ejs");
 
 //GET: Index.html
 app.get("/", (req, res) => {
@@ -22,6 +25,7 @@ app.post("/contact", async (req, res) => {
   try {
     const { username, email, message } = req.body;
     const info = await sendMail(username, email, message);
+    res.sendFile(path.join(__dirname, "/public/index.html"));
     console.log(info);
   } catch (error) {
     throw error;
