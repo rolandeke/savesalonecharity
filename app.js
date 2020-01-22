@@ -40,10 +40,13 @@ app.post("/", async (req, res) => {
         clas: "lead text-danger"
       });
     }
-
-    //res.sendFile(path.join(__dirname, "/public/index.html"));
   } catch (error) {
-    throw error;
+    //throw error;
+    res.render("index", {
+      message: `There was an error sending you email. Please try again`,
+      title: "Error",
+      clas: "lead text-danger"
+    });
   }
 });
 //This function is used to send mails from contact form
