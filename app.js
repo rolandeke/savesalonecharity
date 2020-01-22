@@ -31,12 +31,6 @@ app.post("/contact", async (req, res) => {
     throw error;
   }
 });
-
-const port = process.env.PORT || 3000;
-app.listen(port, () => {
-  console.log(`Server started on port ${port}`);
-});
-
 //This function is used to send mails from contact form
 sendMail = async (email, username, message) => {
   try {
@@ -63,3 +57,8 @@ sendMail = async (email, username, message) => {
     throw error;
   }
 };
+
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+  console.log(`Server started on port ${port}`);
+});
