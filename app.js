@@ -25,7 +25,11 @@ app.post("/contact", async (req, res) => {
   try {
     const { username, email, message } = req.body;
     const info = await sendMail(username, email, message);
-    res.sendFile(path.join(__dirname, "/public/index.html"));
+    res.render("index", {
+      message: `Dear ${username} your email has been sent successfully. <br> Save Salone will reply to you as soon as possible.`,
+      title: "Success"
+    });
+    //res.sendFile(path.join(__dirname, "/public/index.html"));
   } catch (error) {
     throw error;
   }
