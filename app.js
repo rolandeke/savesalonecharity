@@ -21,14 +21,26 @@ app.get("/", (req, res) => {
 });
 
 //POST: COntact form from index.html
-app.post("/contact", async (req, res) => {
+app.post("/", async (req, res) => {
   try {
     const { username, email, message } = req.body;
     const info = await sendMail(username, email, message);
-    res.render("index", {
-      message: `Dear ${username} your email has been sent successfully. <br> Save Salone will reply to you as soon as possible.`,
-      title: "Success"
-    });
+    console.log(info);
+    const { messageId } = info;
+    if (messageId) {
+      res.render("index", {
+        message: `Dear ${username} your email has been sent successfully. <br> Save Salone will reply to you as soon as possible.`,
+        title: "Success",
+        clas: "lead text-success"
+      });
+    } else {
+      res.render("index", {
+        message: `Dear ${username} there was an error sending you email. Please try again`,
+        title: "Error",
+        clas: "lead text-danger"
+      });
+    }
+
     //res.sendFile(path.join(__dirname, "/public/index.html"));
   } catch (error) {
     throw error;
