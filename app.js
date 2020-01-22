@@ -26,7 +26,6 @@ app.post("/contact", async (req, res) => {
     const { username, email, message } = req.body;
     const info = await sendMail(username, email, message);
     res.sendFile(path.join(__dirname, "/public/index.html"));
-    console.log(info);
   } catch (error) {
     throw error;
   }
