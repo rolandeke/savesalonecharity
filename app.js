@@ -25,7 +25,6 @@ app.post("/", async (req, res) => {
   try {
     const { username, email, message } = req.body;
     const info = await sendMail(username, email, message);
-    console.log(info);
     const { messageId } = info;
     if (messageId) {
       res.render("index", {
