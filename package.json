@@ -4,8 +4,7 @@
   "description": "Save Salone Charity Foundation Website",
   "main": "index.html",
   "scripts": {
-    "dev": "nodemon app.js",
-    "start": "lite-server"
+    "start": "nodemon app.js"
   },
   "author": "Chinedum Roland EKe",
   "license": "ISC",

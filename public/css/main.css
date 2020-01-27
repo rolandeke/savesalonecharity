@@ -172,3 +172,7 @@ section .section-title {
   height: 120px;
   border-radius: 50%;
 }
+
+.backside .card .list-inline .list-inline-item a {
+  font-size: 30px;
+}
